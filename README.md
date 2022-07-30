@@ -1,6 +1,10 @@
 ## Casuno Coding Chellenge
 
-Git clone `git@github.com:AminAbdisamad/Cosuno_Challenge.git`
+First clone the repository
+
+```bash
+git clone git@github.com:AminAbdisamad/Cosuno_Challenge.git
+```
 
 ### Api setup Instructions
 
