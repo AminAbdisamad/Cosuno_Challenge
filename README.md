@@ -1,6 +1,8 @@
 ## Casuno Coding Chellenge
 
-## Api setup Instructions
+Git clone `git@github.com:AminAbdisamad/Cosuno_Challenge.git`
+
+### Api setup Instructions
 
 ```bash
 cd api
@@ -11,7 +13,7 @@ yarn start # starts the dist
 
 ```
 
-## Frontend Instructions
+### Frontend Instructions
 
 ```bash
 cd frontend
