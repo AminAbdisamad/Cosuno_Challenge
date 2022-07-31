@@ -6,34 +6,6 @@ export const CompanyTypedefs = gql`
     companies(searchTerm: String): [Company]
     getCompanyByCategory(category: String!): [Company]
   }
-  # type Mutation {
-  #   # User
-  #   createUser(data: CreateUserInput!): UserPayload!
-  #   updateUser(data: UpdateUserInput): User
-  #   deleteUser: User
-  #   # Login
-  #   login(email: String!, password: String!): UserPayload!
-  #   forgetPassword(email: String!): UserPayload!
-  #   #Logout
-  #   logout: Boolean!
-  # }
-  # input CreateUserInput {
-  #   userId: String
-  #   email: String
-  #   username: String
-  #   password: String
-  #   fullName: String
-  #   role: ROLE
-  #   status: USERSTATUS
-  # }
-  # input UpdateUserInput {
-  #   email: String
-  #   username: String
-  #   password: String
-  #   fullName: String
-  #   role: ROLE
-  #   status: USERSTATUS
-  # }
 
   type Company {
     id: ID
@@ -42,8 +14,4 @@ export const CompanyTypedefs = gql`
     logo: String!
     city: String!
   }
-  # type UserPayload {
-  #   token: String!
-  #   user: User!
-  # }
 `;
