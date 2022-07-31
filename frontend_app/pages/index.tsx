@@ -1,9 +1,6 @@
 import type { NextPage } from "next";
 import * as React from "react";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { Button, Input, PageHeader } from "antd";
+import { Input, PageHeader } from "antd";
 import Wrapper from "../components/Wrapper";
 import { Companies } from "../components/Companies";
 
@@ -19,10 +16,13 @@ const Home: NextPage = () => {
     <Wrapper>
       <>
         <PageHeader
-          style={{ background: "fff" }}
+          style={{
+            background: "white",
+            borderTopRightRadius: "7px",
+            borderTopLeftRadius: "7px",
+          }}
           title='Construction Companies'
           extra={[
-            //   <Button key='2'>Cancel</Button>,
             <Input
               allowClear
               key='3'

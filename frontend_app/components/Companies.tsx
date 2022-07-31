@@ -23,13 +23,13 @@ export const Companies: React.FC<{ searchTerm: string }> = ({ searchTerm }) => {
       },
     }
   );
-  console.log({ data, error, loading });
 
   if (loading) return <h2>Loading..</h2>;
   if (error) return <h1>Error</h1>;
 
-  const dataSource = data?.companies.map((company) => {
+  const dataSource = data?.companies.map((company, i) => {
     return {
+      id: i,
       key: company.id,
       name: company.name,
       city: company.city,
@@ -53,12 +53,7 @@ export const Companies: React.FC<{ searchTerm: string }> = ({ searchTerm }) => {
       dataIndex: "logo",
       key: "logo",
       render: (logo: any) => {
-        return (
-          <Avatar
-            size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
-            src={logo}
-          />
-        );
+        return <Avatar src={logo} size={50} />;
       },
     },
     {
@@ -82,18 +77,9 @@ export const Companies: React.FC<{ searchTerm: string }> = ({ searchTerm }) => {
 
   console.log(filteredCategories);
 
-  //   const filtered = (value: any) => {
-  //     return {
-  //       text: value,
-  //       value: value,
-  //     };
-  //   };
-
-  //   const filterRegions = uniqueDistricts.map((district) => filtered(district));
-
   return (
     <div style={{ background: "white", padding: "1rem", borderRadius: "7px" }}>
-      <Table dataSource={dataSource} columns={columns} />
+      <Table dataSource={dataSource} columns={columns} rowKey='id' />
     </div>
   );
 };
